@@ -1,0 +1,15 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	myfinalproject.id. root.myfinalproject.id. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	myfinalproject.id.
+100	IN	PTR	myfinalproject.id.
+100	IN	PTR	wordpress.myfinalproject.id.
+100	IN	PTR	mail.myfinalproject.id.
