@@ -1,0 +1,9 @@
+~# apt -y install isc-dhcp-server isc-dhcp-client
+
+-------------------------------KE DIREKTORI default dan IKUTI KONFIGURASINYA-------------------------------
+
+--------------------------UBAH PADA LINE 50 - 58 SAMAKAN SEPERTI PADA KONFIGURASINYA-----------------------
+
+---------------------------------KE DIREKTORI dhcp dan IKUTI KONFIGURASINYA--------------------------------
+
+~# systemctl restart isc-dhcp-server

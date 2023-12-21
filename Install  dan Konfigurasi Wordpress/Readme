@@ -1,0 +1,37 @@
+~# apt -y install php7.3 php7.3-mbstring php-pear php-fpm
+
+---------------------------------------EDIT FILE PADA FOLDER YANG TERTERA-----------------------------------------
+
+~# a2enmod proxy_fcgi setenvif
+
+~# a2enconf php7.3-fpm
+
+~# systemctl restart php7.3-fpm apache2
+
+----------------------------------LAKUKAN INSTALASI DAN KONFIGURASI PADA DATABASE---------------------------------
+
+---------------------------------LANJUTKAN KONFIGURASI SETELAH KONFIGURASI DATABASE-------------------------------
+
+
+~# apt -y install php-common php-gd php-mysql php-enchant hunspell
+
+-----------------------------------------KONFIGURASI PADA DIREKTORI php-------------------------------------------
+
+~# systemctl restart php7.3-fpm
+
+~# cd /var/www/
+
+~# wget https://wordpress.org/latest.tar.gz
+
+~# tar zxvf latest.tar.gz -C /var/www/
+
+~# chown -R www-data:www-data /var/www/wordpress
+
+----------------------------------KONFIGURASI PADA DIREKTORI apache2/conf-available------------------------------
+
+~# a2enconf wordpress
+
+~# systemctl reload apache2
+
+-------------------------------------AKSES URL UNTUK KONFIGURASI WORDPRESS----------------------------------------
+
